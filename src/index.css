@@ -1,13 +1,451 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color:white;
+    color:black;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+strong{
+    color: rgb(239, 64, 45);
 }
+
+button{
+    padding: 20px 75px;
+    border:5px solid white;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: rgb(223, 37, 16);
+    color:white;
+}
+button:hover{
+    opacity: 0.85;
+}
+
+button:active{
+    transform: scale(0.95);
+}
+/* App.js */ 
+
+.navbar{
+    padding:25px;
+    min-height: 5vh;
+    background-color: black;
+    color:white;
+}
+
+
+.navbar .list{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: black;
+    color:white;
+}
+
+.navbar .list li{
+    list-style-type: none;
+    background-color: black;
+    color:white;
+}
+
+.navbar .list li:nth-child(1){
+    margin-right:10%;
+} 
+
+.navbar .list li a{
+    text-decoration: none;
+    font-size: 28px;
+    transition: all 0.5s;
+    background-color: black;
+    color:white;
+}
+
+.navbar .list li a:hover{
+    font-size: 32px;
+    color:red;
+}
+
+.navbar .list li:nth-child(1){
+    border:1px solid white;
+    border-radius: 50%;
+    padding: 10px;
+    background-color:white;
+}
+
+/* App.js */ 
+
+/*  Home.js*/
+.home{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+    border-bottom: 1px solid black;
+
+}
+
+.home .hero{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:100%;
+    min-height: 100vh;
+}
+
+.home .book{
+    display:grid;
+    grid-template-columns:repeat(3,33%);
+    width:100%;
+    min-height: 50vh;
+}
+
+.home .book >div{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 1.25rem;
+}
+
+.home .book .book-inner .main{
+    display: flex;
+    flex-direction: column;
+
+}
+.home .book .book-inner1 .main{
+    display: flex;
+    flex-direction: column;
+}
+.home .book .book-inner2 .main{
+    display: flex;
+    flex-direction: column;
+}
+
+.home .book .book-inner .main .outer2{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    width:100%;
+    border: 1px solid black;
+    padding: 10px 50px;
+}
+
+.home .book .book-inner .main .gap{
+    margin: 5px;
+}
+.home .book .book-inner .main .gap .outer3 .outer4{
+    background-color: rgb(121, 176, 176);
+}
+
+.home .book .book-inner .main .gap .outer3 .outer4:hover{
+    background-color: rgb(113, 144, 144);
+}
+
+
+.home .book .book-inner1 .main .gap{
+    margin: 5px;
+}
+.home .book .book-inner1 .main .gap .outer3 .outer4{
+    background-color: rgb(121, 176, 176);
+}
+
+.home .book .book-inner1 .main .gap .outer3 .outer4:hover{
+    background-color: rgb(113, 144, 144);
+}
+
+.home .book .book-inner2 .main .gap{
+    margin: 5px;
+}
+.home .book .book-inner2 .main .gap .outer3 .outer4{
+    background-color: rgb(121, 176, 176);
+}
+
+.home .book .book-inner2 .main .gap .outer3 .outer4:hover{
+    background-color: rgb(113, 144, 144);
+}
+
+.home .book .book-inner1 .main .outer2{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    width:100%;
+    border: 1px solid black;
+    padding: 10px 50px;
+}
+
+.home .book .book-inner2 .main .outer2{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    width:100%;
+    border: 1px solid black;
+    padding: 10px 50px;
+
+}
+.home .book button{
+    padding: 20px 75px;
+    border:5px solid white;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: rgb(223, 37, 16);
+    color:white;
+}
+
+
+.home .book input{
+    padding: 10px 50px;
+    background-color: rgb(244, 216, 59);
+    color:black;
+    font-size: 1.2rem;
+}
+
+.home .hero .hero-content{
+    width:50%;
+    padding: 50px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.home .hero .hero-content .plans h3{
+    font-size: 2rem;
+    font-weight: 300;
+}
+.home .hero .hero-content .plans h1{
+    font-size: 4rem;
+    font-weight:800;
+}
+.home .hero .hero-content .plans h5{
+    font-size: 1.2rem;
+    font-weight: lighter;
+}
+.home .hero .hero-content .plans button{
+    padding: 20px 35px;
+    margin-right:50px;
+    margin-top:50px;
+    border:5px solid white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.home .hero .hero-content .plans .btn1{
+    background-color: rgb(223, 37, 16);
+    color:white;
+    font-size: 1.25rem;
+}
+.home .hero .hero-content .plans .btn2{
+    background-color: black;
+    color:white;
+    font-size: 1.25rem;
+}
+.home .hero .hero-content .plans .strong{
+    color: rgb(239, 64, 45);
+}
+
+.home .hero .hero-pic{
+    width:70%;
+    border-radius: 50px;
+}
+
+.home .hero .hero-pic img{
+    object-fit: contain;
+    width:100%;
+    height: 100%;
+    border-radius: 50px;
+    opacity: 1;
+    cursor: pointer;
+}
+
+.home .hero .hero-pic img:hover{
+    opacity: 0.95;
+}
+
+.home .book h2{
+    font-weight: 200;
+
+}
+
+/*  Home.js*/
+
+
+/* Tips.js */
+
+.home .tips{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:20px;
+}
+
+.home .tips h3{
+    font-size: 3rem;
+}
+
+.home .tips h1{
+    font-size: 4rem;
+    color: rgb(239, 64, 45);
+}
+
+.home .tips .tips3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home .tips .tips3 >div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px;
+    gap:30px;
+}
+
+.home .tips .tips3 div .blur{
+    box-shadow: 2px 2px 25px orange;
+}
+.home .tips .tips3 div >p{
+    font-size: 1.25rem;
+}
+
+
+/* Tips.js */
+
+/* Home2.js */
+
+
+.home .home2 .banner{
+    background-color:black;
+    padding: 50px;
+    width:100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:25px;
+}
+
+.home .home2 .banner h1{
+    color:white;
+    font-size: 4rem;
+    background-color: black;
+}
+.home .home2 .banner p{
+    color:white;
+    font-size: 2rem;
+    background-color: black;
+}
+
+.home .home2 .banner strong{
+    font-size: 2rem;
+    background-color: black;
+}
+
+.home .bigpic{
+    padding: 100px;
+}
+
+/* Home2.js */
+/* Home3.js */
+.home .home3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home .home3 .left,.home .home3 .right{
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap:30px;
+}
+.home .home3 .left{
+    width:60%;
+}
+.home .home3 .right{
+    width:40%;
+}
+
+.home .home3 .left h3{
+    font-size:3rem ;
+}
+.home .home3 .left h1{
+    font-size: 4.3rem;
+    font-weight:bolder;
+}
+.home .home3 .left p{
+    font-size: 1.1rem;
+    font-weight: lighter;
+}
+
+.home .home3 .right div >div{
+    width:70%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+/* Home3.js */
+
+.home .home4{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 100px;
+    background-color: goldenrod;
+    color: white;
+
+}
+.home .home4 h2{
+    font-size: 2rem;
+    background-color: goldenrod;
+    
+}   
+.home .home4 h1{
+font-size: 3.5rem;
+background-color: goldenrod;
+
+}
+
+.home .home4 p{
+    font-size: 1.3rem;
+    background-color: goldenrod;
+    color: white;
+}
+
+.home .cards{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    background-color:whitesmoke;
+}
+
+.home .cards >div{
+    border:2px solid white;
+    padding: 25px;
+    width:50%;
+    margin: 10px;
+    box-shadow: 2px 2px 5px black,-2px -2px 5px black;
+
+}
+.home .cards >div img{
+    width:100px;
+    height:100px;
+    border-radius: 50%;
+}
+
+.home .cards >div h1{
+    font-size: 1.3rem;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 1px;
+    word-spacing: 10px;
+}
+
+.home .cards .card1 >div,.home .cards .card2 >div{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 25px;
+}
+
+
