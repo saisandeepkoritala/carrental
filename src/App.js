@@ -7,6 +7,7 @@ import OurTeam from "./components/OurTeam";
 import Contact from "./components/Contact";
 import {AiOutlineCar} from "react-icons/ai";
 import {sel_options,sel_options1,sel_options2} from "./data/data"
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -45,6 +46,7 @@ function App() {
         <Route path="/ourteam" element={<OurTeam />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
+      <Footer/>
     </BrowserRouter>
   );
 }
